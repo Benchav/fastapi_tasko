@@ -16,6 +16,7 @@ def route_create_user(data: UserIn):
 def route_get_users():
     return get_all_users()
 
+# this endpoint is for get an unique user
 @router.get("/{user_id}", response_model=UserOut)
 def route_get_user(user_id: str):
     u = get_user_by_id(user_id)
